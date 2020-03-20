@@ -1,7 +1,11 @@
 <%= flash[:success] %>
 <%= flash[:danger] %>
 <br><br>
-<%= @post.message %>
+<div class="show-post-content">
+  <div class="show-post-message">
+    <%= @post.message %>
+  </div>
+</div>
 
 
 <div class="comment-box">
