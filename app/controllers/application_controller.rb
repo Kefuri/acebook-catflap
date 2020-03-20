@@ -7,7 +7,5 @@ class ApplicationController < ActionController::Base
   
   def require_login
     redirect_to '/users/new' unless session[:current_user_id]
-
-  end  
-
+  end
 end
