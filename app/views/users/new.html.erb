@@ -4,31 +4,27 @@
   </div>
 <% end %>
 
+<div class="mx-auto" style="width: 1000px;">
 
 <h1>Welcome to Catflap</h1>
 <h2>Please Sign Up!</h2>
 
+  <div class="w-25 p-3" style="background-color: #AABAF2;">
 
-<%= form_for @user do |form| %> 
-  <div>
-    <%= render 'shared/error_messages' %>
+    <%= bootstrap_form_for(@user) do |form| %> 
+      <p>
+      <%= form.email_field :email %>
+      </p>
+      <p>
+      <%= form.password_field :password, help: "Must be between 6 and 10 characters long"%>
+      </p>
+      <p>
+        <%= form.submit "Submit", class: "btn btn-primary" %>
+      </p>
+    <% end %>
+    <div>
+      Already a member? 
+      <%= link_to "Log in", sessions_new_path, method: :get %>
+    </div>
   </div>
-  <p>
-    <%= form.label :email %> <br>
-    <%= form.email_field :email %>
-  </p>
-
-  <p>
-    <%= form.label :password %> <br>
-    <%= form.password_field :password %>
-  </p>
-
-  <p>
-    <%= form.submit "Submit" %>
-  </p>
-<% end %>
-
-<div>
-  Already a member? 
-  <%= link_to "Log in", sessions_new_path, method: :get %>
 </div>
