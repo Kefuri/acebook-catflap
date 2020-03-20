@@ -45,6 +45,9 @@ GEM
     arel (8.0.0)
     ast (2.4.0)
     bindex (0.5.0)
+    bootstrap_form (4.4.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     builder (3.2.3)
     byebug (10.0.1)
     capybara (3.31.0)
@@ -218,6 +221,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_votable
+  bootstrap_form
   byebug
   capybara (~> 3.31.0)
   jbuilder (~> 2.5)
