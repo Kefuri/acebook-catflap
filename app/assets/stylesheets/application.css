@@ -44,5 +44,21 @@ body {
 }
 
 .comment-box {
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
+.comments {
+  margin: 0 auto;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-right: 10px;
+  width: 500px;
+  background-color: #AABAF2;
+  border-width: 2px;
+  border-color: #B1FCFB;
+  border-style: solid;
 }
