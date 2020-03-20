@@ -30,7 +30,7 @@ RSpec.feature "Sign Up", type: :feature do
     fill_in "Password", with: "password"
     click_button "Submit"
     expect(current_path).to eq('/users')
-    expect(page).to have_content('Email can\'t be blank')
+    expect(page).to have_content('can\'t be blank')
   end
 
   scenario 'Returns error message if password too long' do
@@ -39,7 +39,7 @@ RSpec.feature "Sign Up", type: :feature do
     fill_in "Password", with: "passwordpassword"
     click_button "Submit"
     expect(current_path).to eq('/users')
-    expect(page).to have_content('Password is too long')
+    expect(page).to have_content('is too long (maximum is 10 characters)')
   end
 
   scenario 'Returns error message if password too short' do
@@ -48,6 +48,6 @@ RSpec.feature "Sign Up", type: :feature do
     fill_in "Password", with: "pass"
     click_button "Submit"
     expect(current_path).to eq('/users')
-    expect(page).to have_content('Password is too short')
+    expect(page).to have_content('is too short (minimum is 6 characters)')
   end
 end
