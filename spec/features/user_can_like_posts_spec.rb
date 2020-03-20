@@ -11,7 +11,7 @@ RSpec.feature "Liking posts", type: :feature do
     expect(current_path).to eq('/posts')
     this = page.find_by_id('like')
     this.click
-    expect(page).to have_content("\n1\n😸")
+    expect(page).to have_content("\n1 😸")
   end
   scenario "User can unlike posts" do
     sign_up
@@ -23,11 +23,11 @@ RSpec.feature "Liking posts", type: :feature do
     expect(current_path).to eq('/posts')
     this = page.find_by_id('like')
     this.click
-    expect(page).to have_content("\n1\n😸")
+    expect(page).to have_content("\n1 😸")
     this = page.find_by_id('liked')
     this.click
     expect(page).to have_content("😸")
     page.refresh
-    expect(page).to have_content("\n0\n😸")
+    expect(page).to have_content("\n0 😸")
   end
 end
